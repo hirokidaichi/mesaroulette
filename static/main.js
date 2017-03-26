@@ -12,7 +12,7 @@ $(function() {
         speed: 10,
         duration: 10,
         rollCount: 10,
-        stopImageNumber: 0,
+        stopImageNumber: Math.floor(Math.random() * 10),
     };
     // #e63803
     var r = $('div.roulette').roulette(option);
