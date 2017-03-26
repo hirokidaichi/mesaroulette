@@ -1,0 +1,11 @@
+--2017-03-26 00:30:24--  https://placehold.jp/cccc00/ffffff/385x160.png
+Resolving placehold.jp... 160.16.60.40
+Connecting to placehold.jp|160.16.60.40|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [image/png]
+Saving to: '385x160.png.7'
+
+     0K ....                                                   3.98M=0.001s
+
+2017-03-26 00:30:24 (3.98 MB/s) - '385x160.png.7' saved [4511]
+
