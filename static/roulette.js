@@ -108,26 +108,8 @@
                 });
                 p.totalHeight = p.imageCount * p.imageHeight;
                 p.runUpDistance = 2 * p.imageHeight;
-                console.log(p.totalHeight);
 
-                /*p.$images.eq(0).bind('load', function() {
-                    p.imageHeight = $(this).height();
-                    $roulette.css({
-                        'height': (p.imageHeight + 'px')
-                    });
-                    p.totalHeight = p.imageCount * p.imageHeight;
-                    p.runUpDistance = 2 * p.imageHeight;
-                    console.log(p.totalHeight);
-                }).each(function() {
-                    if (this.complete || this.complete === undefined) {
-                        var src = this.src;
-                        // set BLANK image
-                        this.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-                        this.src = src;
-                    }
-                });*/
             }
-            //$roulette.find('div').remove();
             p.$images.css({
                 'display': 'block'
             });
