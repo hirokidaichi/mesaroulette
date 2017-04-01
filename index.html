@@ -5,6 +5,7 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <link rel="stylesheet" 
           href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/animate.css" />
     <link rel="stylesheet" href="/static/main.css?t=1" />
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/static/roulette.js"></script>
@@ -14,50 +15,57 @@
   </head>
   <body>
     <main>
-    <div class="container">
+    <div class="container animated fadeIn">
       <div class="logo">
         <img src="/static/logo.png" alt="log">
       </div>
       <div class="switch">
-        <button type="button" class="btn btn-info" id="start">出品</button>
+        <div class="count">
+          残り<span id="count-num">10</span>個
+        </div>
+        <button type="button" class="btn btn-info" id="start">出品</span></button>
         <button type="button" class="btn btn-danger" id="stop">落札</button>
       </div>
       <div class="smartphone">
         <div class="wrap">
           <div class="roulette">
               <div class="roulette-slot soldout">
+                <img src="/static/image/hanayome.png" />
+                <div class="item-desc">花嫁(星野様専用)</div>
+              </div>
+              <div class="roulette-slot">
                 <img src="/static/image/umai.png" />
                 <div class="item-desc">うまい棒（未使用）</div>
               </div>
-              <div class="roulette-slot soldout">
+              <div class="roulette-slot">
                 <img src="/static/image/onsen.png" />
                 <div class="item-desc">大当たり！温泉旅行券１０万円</div>
               </div>
-              <div class="roulette-slot soldout">
+              <div class="roulette-slot">
                 <img src="/static/image/sushi.png" />
                 <div class="item-desc">銀座久兵衛１万円クーポン券</div>
               </div>
-              <div class="roulette-slot soldout">
+              <div class="roulette-slot">
                 <img src="/static/image/toaster.png" />
                 <div class="item-desc">(未開封品)バルミューダトースター</div>
               </div>
-              <div class="roulette-slot soldout">
+              <div class="roulette-slot">
                 <img src="/static/image/memoto.png" />
                 <div class="item-desc">目元エステ純正品(Panasonic)</div>
               </div>
-              <div class="roulette-slot soldout">
+              <div class="roulette-slot">
                 <img src="/static/image/disney.png" />
                 <div class="item-desc">ディスニーペアチケット</div>
               </div>
-              <div class="roulette-slot soldout">
+              <div class="roulette-slot">
                 <img src="/static/image/wine.png" />
                 <div class="item-desc">高級ワイン</div>
               </div>
-              <div class="roulette-slot soldout">
+              <div class="roulette-slot">
                 <img src="/static/image/temomin.png" />
                 <div class="item-desc">てもみん１万円文クーポン券</div>
               </div>
-              <div class="roulette-slot soldout">
+              <div class="roulette-slot">
                 <img src="/static/image/gyoza.png" />
                 <div class="item-desc">宇都宮餃子</div>
               </div>

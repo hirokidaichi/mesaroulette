@@ -15,7 +15,6 @@
             $rouletteTarget: null,
             imageCount: null,
             $images: null,
-            originalStopImageNumber: null,
             totalHeight: null,
             topPosition: 0,
 
@@ -97,11 +96,9 @@
             $roulette.css({
                 'overflow': 'hidden'
             });
-            defaultProperty.originalStopImageNumber = p.stopImageNumber;
             if (!p.$images) {
                 p.$images = $roulette.find('.roulette-slot').remove();
                 p.imageCount = p.$images.length;
-                console.log(p.$images.eq(0).height());
                 p.imageHeight = 402;
                 $roulette.css({
                     'height': (p.imageHeight + 'px')
@@ -123,28 +120,20 @@
             $roulette.show();
         }
 
-        var start = function() {
+        var start = function(number) {
             p.playCount++;
             if (p.maxPlayCount && p.playCount > p.maxPlayCount) {
                 return;
             }
-            p.stopImageNumber = $.isNumeric(defaultProperty.originalStopImageNumber) && Number(defaultProperty.originalStopImageNumber) >= 0 ?
-                Number(defaultProperty.originalStopImageNumber) : Math.floor(Math.random() * p.imageCount);
+            console.log(number, "start");
+            p.stopImageNumber = number;
             p.startCallback();
             roll();
-            setTimeout(function() {
-                slowDownSetup();
-            }, p.duration * 1000);
+
         }
 
         var stop = function(option) {
             if (!p.isSlowdown) {
-                if (option) {
-                    var stopImageNumber = Number(option.stopImageNumber);
-                    if (0 <= stopImageNumber && stopImageNumber <= (p.imageCount - 1)) {
-                        p.stopImageNumber = option.stopImageNumber;
-                    }
-                }
                 slowDownSetup();
             }
         }
@@ -153,7 +142,6 @@
             p.speed = Number(p.speed);
             p.duration = Number(p.duration);
             p.duration = p.duration > 1 ? p.duration - 1 : 1;
-            defaultProperty.originalStopImageNumber = options.stopImageNumber;
         }
 
         var ret = {

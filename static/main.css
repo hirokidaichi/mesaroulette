@@ -43,6 +43,19 @@ main{
     border-radius:0px;
     font-size:20pt;
 }
+#start {
+    background-color:#16aed8;
+}
+.count {
+    text-align:center;
+    width:100%;
+    height:80px;
+    font-size:20pt;
+}
+
+#count-num {
+    font-size:30pt;
+}
 
 .logo {
     position:absolute;
